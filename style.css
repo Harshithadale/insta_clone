@@ -10,7 +10,7 @@
 #sidebar{
     display: flex;
     flex-direction: column;
-    width: 244px;
+    min-width: 10%;
     height: 616px;
     border-right: 1px solid #DBDBDB;
     padding-right: 1px;
@@ -131,6 +131,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 .story >p{
     width: 79.82499694824219px;
@@ -148,9 +149,8 @@ footer{
 
 #stories-section{
     display: flex;
-    justify-content: space-between;
-    width: 500px;
-    height: 85px;
+    width: 100%;
+    flex-wrap: wrap;
 
 }
 .stories-image{
@@ -284,32 +284,34 @@ footer{
 
 }
 #post-section{
-    width: 470px;
+    width: 80%;
     height: 15363.671875px;
     padding-bottom: 12627.25px;
     gap: 12px;
     margin-left: 50px;
     margin-top: 30px;
+    position: relative;
 }
 .post{
     margin-top:30px;
-    width: 470px;
-    height: 829px;
+    width: 80%;
+    height: fit-content;
     padding-bottom: 21px;
     border-bottom: 1px solid #DBDBDB;
 
+
 }
 .post>img{
-    width: 468px;
-    height: 585px; 
+    width: 80%;
 }
 .user-info-post{
-    width: 470px;
+    width: 80%;
     height: 56px;
     border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
 }
 .user-info-post-left{
     display: flex;
@@ -318,12 +320,14 @@ footer{
 }
 .user-image-post{
     background-image:url("./assets/d59b1ea31e416e3048b80457ae54eaf81b5d84e6.png") ;
-    background-size: cover;
+    background-size: contain;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
+    background-position: center;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
 
 }
 .user-image-post>img{
@@ -337,10 +341,9 @@ footer{
  
 }
 .user-info-post-middle{
-    width: 380px;
+    width: 88%;
     height: 40px;
     padding-top: 7px;
-    padding-right: 242.77px;
     padding-bottom: 10px;
     display: flex;
     align-items: center;
@@ -479,8 +482,7 @@ footer{
     padding-left: 12px;
     gap: 24px;
     width: 400px;
-    position: relative;
-
+     position: relative;
 }
 .post-suggestions-box>div{
     width: 176px;
@@ -563,5 +565,19 @@ footer{
 @media screen  and (max-width:1184px){
     footer{
         display: none;
+    }
+}
+@media screen  and (max-width:642px){
+    footer{
+        display: none;
+    }
+    #sidebar{
+        display: none;
+    }
+    #main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
